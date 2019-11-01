@@ -18,24 +18,24 @@ this is the initial .NET Core MVC structure and application built from scratch.
 - MVC dependency in ConfigureServices  
 - DBContext registered in ConfigureServices  
 - Use of static files accepted  
-2) Controller  
+#### 2) Controller  
 - Home Controller  
-3) Data  
+#### 3) Data  
 - DBContext present and properly configured  
 - DB Tables for each entity model (DbSet<T>)  
 - Composite key association present in OnModelCreating override.  
 - appsettings.json file present with name of database updated.  
-4) Models  
+#### 4) Models  
 - Each Entity from the DB Table converted into a Model  
 - Proper naming conventions of Primary keys  
 - Navigation properties present in each Model where required  
 - Enum present in appropriate model  
-5) Views  
+#### 5) Views  
 - View for home page that matches default routing  
-6) Home Page  
+#### 6) Home Page  
 - stylesheet present in web application.  
 - stylesheet referenced on home page.  
-7) Web application should build, compile, and redirect us to the home page upon launch.  
+#### 7) Web application should build, compile, and redirect us to the home page upon launch.  
 
 
 ---
