@@ -60,8 +60,8 @@ Then select and open ```AyncINN.sln```
 
 ### Visuals
 
-#### Application Start
-![Image 1](https://github.com/biniamsea2/Lab03-Systems-IO/blob/master/Screenshots/mainMenu.png)
+#### Entity Relationship Diagram
+![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AsyncInn2.png)
 
 ---
 
