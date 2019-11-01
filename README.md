@@ -64,16 +64,20 @@ Then select and open ```AyncINN.sln```
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AsyncInn2.png)
 
 ---
-### Hotel Table: The hotel table consists of all the hotel's information that the owners of the Async hotel requires. It includes the primary ID key, name, city, state, address, phone number, and the number of rooms. It has a 1:Many relationship to the HotelRoom table. 
+### Hotel Table:  
+The hotel table consists of all the hotel's information that the owners of the Async hotel requires. It includes the primary ID key, name, city, state, address, phone number, and the number of rooms. It has a 1:Many relationship to the HotelRoom table. 
 
-Room Table: The room table is the joint table with payload since it holds two foreign keys the location ID and the room type ID as well as the room number and the price. It also holds the room number and the price. The room relies on two tables the location and room type tables.
+### HotelRoom Table:  
+The HotelRoom table is the join table with payload since it holds two foreign keys the HotelID and the Room ID. In addition is also has information on the rate and whether or not it's pet friendly. It has a many:1 relationship to the Room table.
 
-Nickname Table: The nickname table is pure join table keys which are the location ID, room type ID, and the amenities group ID. 
+### Room Table:  
+Consits of a primary key and information on the name and layout of the room. We also have an enum of the room's layout, whether it's a one bedroom, two bedroom, or a studio. This table has a 1:many relationship with the RoomAmenities table.
 
-Room Type: Room type table holds the primary ID key and the layout of the room type. It also relies on the room table.
-Amenities Group Table: Takes in a primary key and a foreign key. The foreign key is the amenities ID. We are grouping a bunch of amenities in a group.
+### Room Amenities Table:  
+RoomAmenities table is our pure join table since its taking only two foreign keys (AmenitiesID and RoomID). This table has a many:1 relationship to the Amenities table.
 
-Amenities Enum: The amenities is an enum and has the primary ID key. This will hold all the different types of amenities.
+### Amenities Table:  
+Our Amenities table is holding a primary key and information regarding the names if the amenities.
 
 ---
 
