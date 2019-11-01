@@ -13,7 +13,7 @@ this is the initial .NET Core MVC structure and application built from scratch.
 ## Application Specifications
 ###### Your application should include the following:  
 
-1) Startup File  
+#### 1) Startup File  
 - Explicit routing of MVC  
 - MVC dependency in ConfigureServices  
 - DBContext registered in ConfigureServices  
