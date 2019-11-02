@@ -12,8 +12,8 @@ namespace AyncINN.Models
         public int RoomID { get; set; }
 
         //nav properties (composite keys)
-        public ICollection<Amenities> Amenities { get; set; }
-        public ICollection<Room> Room { get; set; }
+        public Amenities Amenities { get; set; }
+        public Room Room { get; set; }
 
     }
 }
