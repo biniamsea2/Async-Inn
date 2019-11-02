@@ -16,8 +16,8 @@ namespace AyncINN.Models
 
 
         //nav properties (composite keys)
-    public ICollection<Hotel> Hotel { get; set; }
-    public ICollection<Room> Room { get; set; }
+    public Hotel Hotel { get; set; }
+    public Room Room { get; set; }
     }
 
 
