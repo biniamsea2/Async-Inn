@@ -82,6 +82,6 @@ Our Amenities table is holding a primary key and information regarding the names
 ---
 
 ### Change Log
-1.0: LAB 13: Intro to Entity Framework partial 10/31/19
+1.0: LAB 13: Intro to Entity Framework completed 10/31/19
 
 ------------------------------
