@@ -106,8 +106,8 @@ namespace AyncINN.Data
                  new Room
                  {
                      ID = 3,
-                     Name = "Boom Boom",
-                     Layout = Layout.TwoBedroom
+                     Name = "Honeymoon",
+                     Layout = Layout.OneBedroom
                  },
 
                    new Room
