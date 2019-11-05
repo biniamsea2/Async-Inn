@@ -23,7 +23,7 @@ namespace AyncINN.Controllers
         // GET: Amenities
         public async Task<IActionResult> Index()
         {
-            return View(await _context.GetAmenities());
+            return View(await _context.GetAmenitiesAsync());
         }
 
         // GET: Amenities/Details/5
@@ -34,7 +34,7 @@ namespace AyncINN.Controllers
                 return NotFound();
             }
 
-            Amenities amenities = await _context.GetAmenityByID(id);
+            Amenities amenities = await _context.GetAmenityByIDAsync(id);
 
             if (amenities == null)
             {
@@ -59,7 +59,7 @@ namespace AyncINN.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _context.CreateAmenity(amenities);
+                await _context.CreateAmenityAsync(amenities);
                 return RedirectToAction(nameof(Index));
             }
             return View(amenities);
@@ -73,7 +73,7 @@ namespace AyncINN.Controllers
                 return NotFound();
             }
 
-            var amenities = await _context.GetAmenityByID(id);
+            var amenities = await _context.GetAmenityByIDAsync(id);
             if (amenities == null)
             {
                 return NotFound();
@@ -97,7 +97,7 @@ namespace AyncINN.Controllers
             {
                 try
                 {
-                    await _context.UpdateAmenitites(amenities);
+                    await _context.UpdateAmenititesAsync(amenities);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -123,7 +123,7 @@ namespace AyncINN.Controllers
                 return NotFound();
             }
 
-            await _context.DeleteAmenities(id);
+            await _context.DeleteAmenitiesAsync(id);
             return RedirectToAction("Index");
         }
 
@@ -132,13 +132,13 @@ namespace AyncINN.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            await _context.DeleteAmenities(id);
+            await _context.DeleteAmenitiesAsync(id);
             return RedirectToAction(nameof(Index));
         }
 
         private async Task<bool> AmenitiesExists(int id)
         {
-            Amenities amenities = await _context.GetAmenityByID(id);
+            Amenities amenities = await _context.GetAmenityByIDAsync(id);
             if (amenities != null)
             {
                 return true;

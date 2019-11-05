@@ -8,19 +8,19 @@ namespace AyncINN.Models.Interfaces
     public interface IHotelManager
     {
         //Create hotel
-        Task CreateHotel(Hotel hotel);
+        Task CreateHotelAsync(Hotel hotel);
 
         //Get individual Hotel
-        Task<Hotel> GetHotelByID(int id);
+        Task<Hotel> GetHotelByIDAsync(int id);
 
         //Get all hotels
-        Task<List<Hotel>> GetHotels();
+        Task<List<Hotel>> GetHotelsAsync();
 
         //Update hotel
-        Task UpdateHotel(Hotel hotel);
+        Task UpdateHotelAsync(Hotel hotel);
 
         //Delete hotel
-        Task DeleteHotel(int id);
+        Task DeleteHotelAsync(int id);
 
     }
 }

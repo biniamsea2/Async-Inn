@@ -8,18 +8,18 @@ namespace AyncINN.Models.Interfaces
     public interface IAmenitiesManager
     {
         //Create amenity 
-        Task CreateAmenity(Amenities amenities);
+        Task CreateAmenityAsync(Amenities amenities);
 
         //Get individual amenity
-        Task<Amenities> GetAmenityByID(int id);
+        Task<Amenities> GetAmenityByIDAsync(int id);
 
         //Get all amenities
-        Task<List<Amenities>> GetAmenities();
+        Task<List<Amenities>> GetAmenitiesAsync();
 
         //Update amenity
-        Task UpdateAmenitites(Amenities amenities);
+        Task UpdateAmenititesAsync(Amenities amenities);
 
         //Delete amenity
-        Task DeleteAmenities(int id);
+        Task DeleteAmenitiesAsync(int id);
     }
 }

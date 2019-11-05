@@ -17,29 +17,29 @@ namespace AyncINN.Models.Services
             _context = context;
 
         }
-        public async Task CreateRoom(Room room)
+        public async Task CreateRoomAsync(Room room)
         {
             await _context.Room.AddAsync(room);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteRoom(int id)
+        public async Task DeleteRoomAsync(int id)
         {
-            Room room = await GetRoomByID(id);
+            Room room = await GetRoomByIDAsync(id);
             _context.Room.Remove(room);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Room> GetRoomByID(int id) => await _context.Room.FirstOrDefaultAsync(rm => rm.ID == id);
+        public async Task<Room> GetRoomByIDAsync(int id) => await _context.Room.FirstOrDefaultAsync(rm => rm.ID == id);
 
 
-        public async Task<List<Room>> GetRooms()
+        public async Task<List<Room>> GetRoomsAsync()
         {
             List<Room> rooms = await _context.Room.ToListAsync();
             return rooms;
         }
 
-        public async Task UpdateRoom(Room room)
+        public async Task UpdateRoomAsync(Room room)
         {
             _context.Room.Update(room);
             await _context.SaveChangesAsync();
