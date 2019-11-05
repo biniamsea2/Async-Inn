@@ -59,7 +59,8 @@ Then select and open ```AyncINN.sln```
 
 #### Adding a new Hotel
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/biniam-lab14/AyncINN/Screenshot%20(54).png)
-
+#### Viewing all Hotels 
+![Image 2](https://github.com/biniamsea2/Async-Inn/blob/biniam-lab14/AyncINN/Screenshot%20(52).png)
 ---
 
 ### Change Log
