@@ -23,7 +23,7 @@ namespace AyncINN.Controllers
         // GET: Rooms
         public async Task<IActionResult> Index()
         {
-            return View(await _context.GetRooms());
+            return View(await _context.GetRoomsAsync());
         }
 
         // GET: Rooms/Details/5
