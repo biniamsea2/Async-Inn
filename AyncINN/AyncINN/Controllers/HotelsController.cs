@@ -23,7 +23,7 @@ namespace AyncINN.Controllers
         // GET: Hotels
         public async Task<IActionResult> Index()
         {
-            return View(await _context.GetHotels());
+            return View(await _context.GetHotelsAsync());
         }
 
         // GET: Hotels/Details/5
@@ -34,7 +34,7 @@ namespace AyncINN.Controllers
                 return NotFound();
             }
 
-            Hotel hotel = await _context.GetHotelByID(id);
+            Hotel hotel = await _context.GetHotelByIDAsync(id);
            
             if (hotel == null)
             {
@@ -59,7 +59,7 @@ namespace AyncINN.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _context.CreateHotel(hotel);
+                await _context.CreateHotelAsync(hotel);
                 return RedirectToAction(nameof(Index));
             }
             return View(hotel);
@@ -73,7 +73,7 @@ namespace AyncINN.Controllers
                 return NotFound();
             }
 
-            var hotel = await _context.GetHotelByID(id);
+            var hotel = await _context.GetHotelByIDAsync(id);
             if (hotel == null)
             {
                 return NotFound();
@@ -97,7 +97,7 @@ namespace AyncINN.Controllers
             {
                 try
                 {
-                    await _context.UpdateHotel(hotel);
+                    await _context.UpdateHotelAsync(hotel);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -123,7 +123,7 @@ namespace AyncINN.Controllers
                 return NotFound();
             }
 
-            await _context.DeleteHotel(id);
+            await _context.DeleteHotelAsync(id);
             return RedirectToAction("Index");
         }
 
@@ -132,13 +132,13 @@ namespace AyncINN.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            await _context.DeleteHotel(id);
+            await _context.DeleteHotelAsync(id);
             return RedirectToAction(nameof(Index));
         }
 
         private async Task<bool> HotelExists(int id)
         {
-            Hotel hotel = await _context.GetHotelByID(id);
+            Hotel hotel = await _context.GetHotelByIDAsync(id);
             if (hotel != null)
             {
                 return true;

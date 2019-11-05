@@ -34,7 +34,7 @@ namespace AyncINN.Controllers
                 return NotFound();
             }
 
-            Room room = await _context.GetRoomByID(id);
+            Room room = await _context.GetRoomByIDAsync(id);
 
             if (room == null)
             {
@@ -59,7 +59,7 @@ namespace AyncINN.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _context.CreateRoom(room);
+                await _context.CreateRoomAsync(room);
                 return RedirectToAction(nameof(Index));
             }
             return View(room);
@@ -73,7 +73,7 @@ namespace AyncINN.Controllers
                 return NotFound();
             }
 
-            var room = await _context.GetRoomByID(id);
+            var room = await _context.GetRoomByIDAsync(id);
             if (room == null)
             {
                 return NotFound();
@@ -97,7 +97,7 @@ namespace AyncINN.Controllers
             {
                 try
                 {
-                    await _context.UpdateRoom(room);
+                    await _context.UpdateRoomAsync(room);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -123,7 +123,7 @@ namespace AyncINN.Controllers
                 return NotFound();
             }
 
-            await _context.DeleteRoom(id);
+            await _context.DeleteRoomAsync(id);
             return RedirectToAction("Index");
         }
 
@@ -132,13 +132,13 @@ namespace AyncINN.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            await _context.DeleteRoom(id);
+            await _context.DeleteRoomAsync(id);
             return RedirectToAction(nameof(Index));
         }
 
         private async Task<bool> RoomExists(int id)
         {
-            Room room = await _context.GetRoomByID(id);
+            Room room = await _context.GetRoomByIDAsync(id);
             if (room != null)
             {
                 return true;

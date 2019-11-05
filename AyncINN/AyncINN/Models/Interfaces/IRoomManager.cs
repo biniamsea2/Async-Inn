@@ -8,19 +8,19 @@ namespace AyncINN.Models.Interfaces
     public interface IRoomManager
     {
             //Create room
-            Task CreateRoom(Room room);
+            Task CreateRoomAsync(Room room);
 
             //Get individual room
-            Task<Room> GetRoomByID(int id);
+            Task<Room> GetRoomByIDAsync(int id);
 
             //Get all rooms
-            Task<List<Room>> GetRooms();
+            Task<List<Room>> GetRoomsAsync();
 
             //Update room
-            Task UpdateRoom(Room room);
+            Task UpdateRoomAsync(Room room);
 
             //Delete room
-            Task DeleteRoom(int id);
+            Task DeleteRoomAsync(int id);
 
     }
 }

@@ -16,28 +16,28 @@ namespace AyncINN.Models.Services
         {
             _context = context;
         }
-        public async Task CreateHotel(Hotel hotel)
+        public async Task CreateHotelAsync(Hotel hotel)
         {
             await _context.Hotel.AddAsync(hotel);
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteHotel(int id)
+        public async Task DeleteHotelAsync(int id)
         {
-            Hotel hotel = await GetHotelByID(id);
+            Hotel hotel = await GetHotelByIDAsync(id);
             _context.Hotel.Remove(hotel);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Hotel> GetHotelByID(int id) => await _context.Hotel.FirstOrDefaultAsync(htl => htl.ID == id);
+        public async Task<Hotel> GetHotelByIDAsync(int id) => await _context.Hotel.FirstOrDefaultAsync(htl => htl.ID == id);
 
-        public async Task<List<Hotel>> GetHotels()
+        public async Task<List<Hotel>> GetHotelsAsync()
         {
             List<Hotel> hotels = await _context.Hotel.ToListAsync();
             return hotels;
         }
 
-        public async Task UpdateHotel(Hotel hotel)
+        public async Task UpdateHotelAsync(Hotel hotel)
         {
             _context.Hotel.Update(hotel);
             await _context.SaveChangesAsync();
