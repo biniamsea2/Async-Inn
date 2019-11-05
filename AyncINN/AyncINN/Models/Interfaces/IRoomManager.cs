@@ -7,19 +7,19 @@ namespace AyncINN.Models.Interfaces
 {
     public interface IRoomManager
     {
-        //Create hotel
+            //Create room
             Task CreateRoom(Room room);
 
-            //Get individual Hotel
+            //Get individual room
             Task<Room> GetRoomByID(int id);
 
-            //Get all hotels
+            //Get all rooms
             Task<List<Room>> GetRooms();
 
-            //Update hotel
+            //Update room
             Task UpdateRoom(Room room);
 
-            //Delete hotel
+            //Delete room
             Task DeleteRoom(int id);
 
     }
