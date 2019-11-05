@@ -8,8 +8,8 @@ LAB 14: Entity Framework pt. 2
 
 ## Description
 To continue with your AsyncInn Hotel Management System, you need to seed hotel data to display in your application. 
-For Todayís branch, focus on working within the existing code base that was scaffolded out (If you chose to scaffold). 
-Practice learning and understanding a code base that you didnít write, 
+For Today‚Äôs branch, focus on working within the existing code base that was scaffolded out (If you chose to scaffold). 
+Practice learning and understanding a code base that you didn‚Äôt write, 
 but need to make modifications too.
 ## Application Specifications
 ###### For our website, we will have the following pages:  
@@ -20,7 +20,7 @@ but need to make modifications too.
 4) Amenities page that will allow the Admin to add to their list of existing amenities.  
 5) A page where they can link the Amenities to the rooms that currently exist.  
 6) A page where they can add existing rooms to hotels.  
-###### Following the design, Create a controller for each of the pages listed above. You should ìAdd ª Controllerî on the controllers folder and scaffold out the basic CRUD operations.
+###### Following the design, Create a controller for each of the pages listed above. You should ‚ÄúAdd ¬ª Controller‚Äù on the controllers folder and scaffold out the basic CRUD operations.
 
 ##### Your application should include the following:  
 
@@ -32,7 +32,7 @@ but need to make modifications too.
 3) Update the dropdown lists to include the Layout enum, and associations between the Room and Hotel, as well as the Room and Amenities. Be sure to display user friendly information in your views (example: display string names instead of ids).  
 4) Based off of the readings from day 14, either utilize bootstrap (download it into your project from NuGet), or remove all bootstrap specific classes in your HTML. (clean it up!)  
 5) Add your own styling to the Hotel creation page, Room Creation Page, and Amenities creation page.  
-6) On the Home Page, create a navigation to the ìCreate Hotelî page, ìCreate Roomî page, ìCreate Amenityî page, as well as pages for the ìHotelRoomî association and ìRoomAmenityî association. Each of these pages (excluding HotelRoom and Room Amenity (see below)) should allow the user to edit/remove existing data.   
+6) On the Home Page, create a navigation to the ‚ÄúCreate Hotel‚Äù page, ‚ÄúCreate Room‚Äù page, ‚ÄúCreate Amenity‚Äù page, as well as pages for the ‚ÄúHotelRoom‚Äù association and ‚ÄúRoomAmenity‚Äù association. Each of these pages (excluding HotelRoom and Room Amenity (see below)) should allow the user to edit/remove existing data.   
 All pages should allow to view the data.  
 
 ---
@@ -57,8 +57,8 @@ Then select and open ```AyncINN.sln```
 
 ### Visuals
 
-#### Application Start
-![Image 1](https://github.com/biniamsea2/Lab03-Systems-IO/blob/master/Screenshots/mainMenu.png)
+#### Adding a new Hotel
+![Image 1](https://github.com/biniamsea2/Async-Inn/blob/biniam-lab14/AyncINN/Screenshot%20(54).png)
 
 ---
 
