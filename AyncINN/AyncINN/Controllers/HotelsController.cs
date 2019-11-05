@@ -7,34 +7,35 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AyncINN.Data;
 using AyncINN.Models;
+using AyncINN.Models.Interfaces;
 
 namespace AyncINN.Controllers
 {
     public class HotelsController : Controller
     {
-        private readonly AsyncInnDbContext _context;
+        private readonly IHotelManager _context;
 
-        public HotelsController(AsyncInnDbContext context)
+        public HotelsController(IHotelManager hotel)
         {
-            _context = context;
+            _context = hotel;
         }
 
         // GET: Hotels
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Hotel.ToListAsync());
+            return View(await _context.GetHotels());
         }
 
         // GET: Hotels/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
+            if (id <= 0)
             {
                 return NotFound();
             }
 
-            var hotel = await _context.Hotel
-                .FirstOrDefaultAsync(m => m.ID == id);
+            Hotel hotel = await _context.GetHotelByID(id);
+           
             if (hotel == null)
             {
                 return NotFound();
@@ -58,22 +59,21 @@ namespace AyncINN.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(hotel);
-                await _context.SaveChangesAsync();
+                await _context.CreateHotel(hotel);
                 return RedirectToAction(nameof(Index));
             }
             return View(hotel);
         }
 
         // GET: Hotels/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
+            if (id <=0)
             {
                 return NotFound();
             }
 
-            var hotel = await _context.Hotel.FindAsync(id);
+            var hotel = await _context.GetHotelByID(id);
             if (hotel == null)
             {
                 return NotFound();
@@ -97,12 +97,11 @@ namespace AyncINN.Controllers
             {
                 try
                 {
-                    _context.Update(hotel);
-                    await _context.SaveChangesAsync();
+                    await _context.UpdateHotel(hotel);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!HotelExists(hotel.ID))
+                    if (!await HotelExists(hotel.ID))
                     {
                         return NotFound();
                     }
@@ -117,21 +116,15 @@ namespace AyncINN.Controllers
         }
 
         // GET: Hotels/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
+            if (id <= 0)
             {
                 return NotFound();
             }
 
-            var hotel = await _context.Hotel
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (hotel == null)
-            {
-                return NotFound();
-            }
-
-            return View(hotel);
+            await _context.DeleteHotel(id);
+            return RedirectToAction("Index");
         }
 
         // POST: Hotels/Delete/5
@@ -139,15 +132,18 @@ namespace AyncINN.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var hotel = await _context.Hotel.FindAsync(id);
-            _context.Hotel.Remove(hotel);
-            await _context.SaveChangesAsync();
+            await _context.DeleteHotel(id);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool HotelExists(int id)
+        private async Task<bool> HotelExists(int id)
         {
-            return _context.Hotel.Any(e => e.ID == id);
+            Hotel hotel = await _context.GetHotelByID(id);
+            if (hotel != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
