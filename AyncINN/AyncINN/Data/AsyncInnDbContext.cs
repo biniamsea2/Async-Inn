@@ -92,42 +92,42 @@ namespace AyncINN.Data
              new Room
              {
                  ID = 1,
-                 Name = "Boom Boom",
+                 Name = "House Stark",
                  Layout = Layout.OneBedroom
              },
 
                new Room
                {
                    ID = 2,
-                   Name = "No Boom Boom",
-                   Layout = Layout.Studio
+                   Name = "House Frey",
+                   Layout = Layout.Studio,
                },
 
                  new Room
                  {
                      ID = 3,
-                     Name = "Honeymoon",
+                     Name = "House Lannister",
                      Layout = Layout.OneBedroom
                  },
 
                    new Room
                    {
                        ID = 4,
-                       Name = "Lonely",
+                       Name = "House Tyrell",
                        Layout = Layout.Studio
                    },
 
                      new Room
                      {
                          ID = 5,
-                         Name = "R2D2",
+                         Name = "House Targaryen",
                          Layout = Layout.OneBedroom
                      },
 
                        new Room
                        {
                            ID = 6,
-                           Name = "Friends",
+                           Name = "House Baratheon",
                            Layout = Layout.TwoBedroom
                        }
                        );

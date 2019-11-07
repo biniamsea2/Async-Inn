@@ -11,6 +11,7 @@ namespace AyncINN.Models
         public int ID { get; set; }
 
         [Required]
+        [Display(Name = "Room Name")]
         public string Name { get; set; }
         public Layout Layout { get; set; }
 

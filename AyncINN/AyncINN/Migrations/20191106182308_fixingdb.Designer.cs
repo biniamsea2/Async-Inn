@@ -3,14 +3,16 @@ using AyncINN.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AyncINN.Migrations
 {
     [DbContext(typeof(AsyncInnDbContext))]
-    partial class AsyncInnDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191106182308_fixingdb")]
+    partial class fixingdb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -203,37 +205,37 @@ namespace AyncINN.Migrations
                         {
                             ID = 1,
                             Layout = 2,
-                            Name = "House Stark"
+                            Name = "Room Stark"
                         },
                         new
                         {
                             ID = 2,
                             Layout = 1,
-                            Name = "House Frey"
+                            Name = "Room Frey"
                         },
                         new
                         {
                             ID = 3,
                             Layout = 2,
-                            Name = "House Lannister"
+                            Name = "Room Lannister"
                         },
                         new
                         {
                             ID = 4,
                             Layout = 1,
-                            Name = "House Tyrell"
+                            Name = "Room Tyrell"
                         },
                         new
                         {
                             ID = 5,
                             Layout = 2,
-                            Name = "House Targaryen"
+                            Name = "Room Targaryen"
                         },
                         new
                         {
                             ID = 6,
                             Layout = 3,
-                            Name = "House Baratheon"
+                            Name = "Room Baratheon"
                         });
                 });
 
