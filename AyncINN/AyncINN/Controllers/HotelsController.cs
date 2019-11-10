@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using AyncINN.Data;
 using AyncINN.Models;
 using AyncINN.Models.Interfaces;
+using Microsoft.Extensions.Configuration;
+
 
 namespace AyncINN.Controllers
 {
@@ -123,8 +125,8 @@ namespace AyncINN.Controllers
                 return NotFound();
             }
 
-            await _context.DeleteHotelAsync(id);
-            return RedirectToAction("Index");
+            var room = await _context.GetHotelByIDAsync(id);
+            return View(room);
         }
 
         // POST: Hotels/Delete/5

@@ -30,10 +30,14 @@ namespace AyncINN.Models.Services
             await _context.SaveChangesAsync();
         }
 
-        public IEnumerable<RoomAmenities> GetRoomAmenitiesByID(int RoomID)
+        public IEnumerable<RoomAmenities> GetRoomAmenitiesByRoomID(int RoomID)
         {
-            var roomAmenity = _context.RoomAmenities.Where(x => x.RoomID == RoomID);
+            var roomAmenity = _context.RoomAmenities.Where(x => x.RoomID == RoomID)
+            .Include(x => x.Room)
+            .Include(x => x.Amenities);
+
             return roomAmenity;
+        
         }
 
         public async Task<Room> GetRoomByIDAsync(int id) => await _context.Room.FirstOrDefaultAsync(rm => rm.ID == id);

@@ -123,8 +123,8 @@ namespace AyncINN.Controllers
                 return NotFound();
             }
 
-            await _context.DeleteRoomAsync(id);
-            return RedirectToAction("Index");
+            var room = await _context.GetRoomByIDAsync(id);
+            return View(room);
         }
 
         // POST: Rooms/Delete/5
