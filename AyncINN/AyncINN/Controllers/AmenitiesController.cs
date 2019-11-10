@@ -122,9 +122,8 @@ namespace AyncINN.Controllers
             {
                 return NotFound();
             }
-
-            await _context.DeleteAmenitiesAsync(id);
-            return RedirectToAction("Index");
+            var amenity = await _context.GetAmenityByIDAsync(id);
+            return View(amenity);
         }
 
         // POST: Amenities/Delete/5

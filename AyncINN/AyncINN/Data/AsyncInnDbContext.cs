@@ -30,18 +30,18 @@ namespace AyncINN.Data
                     StreetAddress = "1234 15th ave NE",
                     City = "Seattle",
                     State = "WA",
-                    Phone = 1234567767
+                    Phone = "(206)985-8493"
                 },
 
 
                 new Hotel
                 {
                     ID = 2,
-                    Name = "Rest Easy Inn",
+                    Name = "Comfy Hotel",
                     StreetAddress = "1234 15th ave NE",
                     City = "Seattle",
                     State = "WA",
-                    Phone = 1234567767
+                    Phone = "(206)584-3674"
                 },
 
 
@@ -52,17 +52,17 @@ namespace AyncINN.Data
                     StreetAddress = "5678 19th ave SW",
                     City = "New York City",
                     State = "NY",
-                    Phone = 1644563592
+                    Phone = "(212)673-6483"
                 },
 
                   new Hotel
                   {
                       ID = 4,
-                      Name = "Cozy Motel",
+                      Name = "Restful Motel",
                       StreetAddress = "4282 52nd ave W",
                       City = "Miami",
                       State = "FL",
-                      Phone = 1812673541
+                      Phone = "(786)385-7912"
                   },
 
                   new Hotel
@@ -72,7 +72,7 @@ namespace AyncINN.Data
                       StreetAddress = "32634 Santa Monica Blvd",
                       City = "Los Angeles",
                       State = "CA",
-                      Phone = 1457893245
+                      Phone = "(213)789-3841"
                   },
 
                   new Hotel
@@ -82,7 +82,7 @@ namespace AyncINN.Data
                       StreetAddress = "13 Washington St",
                       City = "Oakland",
                       State = "CA",
-                      Phone = 1812673541
+                      Phone = "(510)796-3984"
                   }
 
 
@@ -92,42 +92,42 @@ namespace AyncINN.Data
              new Room
              {
                  ID = 1,
-                 Name = "Boom Boom",
+                 Name = "House Stark",
                  Layout = Layout.OneBedroom
              },
 
                new Room
                {
                    ID = 2,
-                   Name = "No Boom Boom",
-                   Layout = Layout.Studio
+                   Name = "House Frey",
+                   Layout = Layout.Studio,
                },
 
                  new Room
                  {
                      ID = 3,
-                     Name = "Honeymoon",
+                     Name = "House Lannister",
                      Layout = Layout.OneBedroom
                  },
 
                    new Room
                    {
                        ID = 4,
-                       Name = "Lonely",
+                       Name = "House Tyrell",
                        Layout = Layout.Studio
                    },
 
                      new Room
                      {
                          ID = 5,
-                         Name = "R2D2",
+                         Name = "House Targaryen",
                          Layout = Layout.OneBedroom
                      },
 
                        new Room
                        {
                            ID = 6,
-                           Name = "Friends",
+                           Name = "House Baratheon",
                            Layout = Layout.TwoBedroom
                        }
                        );

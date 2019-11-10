@@ -21,6 +21,9 @@ namespace AyncINN.Models.Interfaces
 
             //Delete room
             Task DeleteRoomAsync(int id);
+        
+        //Get amenities
+        IEnumerable<RoomAmenities> GetRoomAmenitiesByRoomID(int RoomID);
 
     }
 }

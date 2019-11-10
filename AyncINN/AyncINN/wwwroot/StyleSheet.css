@@ -1,0 +1,45 @@
+﻿body {
+    background-color: whitesmoke;
+}
+
+td {
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+}
+th {
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+    opacity: initial;
+}
+#space {
+    margin-left: 12px;
+}
+#back{
+    color: white;
+}
+#back1{
+    color:white;
+    margin-left: 2px;
+    margin-right:5px;
+}
+
+.P{
+margin:20px;
+}
+#first{
+    margin-bottom:20px;
+}
+#second {
+    width: 20em;
+}
+#third {
+    width: 20em;
+}
+#fourth {
+    width: 20em;
+}
+.pp{
+    text-align:center;
+}

@@ -3,14 +3,16 @@ using AyncINN.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AyncINN.Migrations
 {
     [DbContext(typeof(AsyncInnDbContext))]
-    partial class AsyncInnDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191106195252_changedRoomNameAndDisplayName")]
+    partial class changedRoomNameAndDisplayName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,9 +83,8 @@ namespace AyncINN.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Phone")
+                        .HasColumnType("int");
 
                     b.Property<string>("State")
                         .IsRequired()
@@ -103,7 +104,7 @@ namespace AyncINN.Migrations
                             ID = 1,
                             City = "Seattle",
                             Name = "Rest Easy Inn",
-                            Phone = "(206)985-8493",
+                            Phone = 1234567767,
                             State = "WA",
                             StreetAddress = "1234 15th ave NE"
                         },
@@ -112,7 +113,7 @@ namespace AyncINN.Migrations
                             ID = 2,
                             City = "Seattle",
                             Name = "Rest Easy Inn",
-                            Phone = "(206)584-3674",
+                            Phone = 1234567767,
                             State = "WA",
                             StreetAddress = "1234 15th ave NE"
                         },
@@ -121,7 +122,7 @@ namespace AyncINN.Migrations
                             ID = 3,
                             City = "New York City",
                             Name = "Sleep Well Inn",
-                            Phone = "(212)673-6483",
+                            Phone = 1644563592,
                             State = "NY",
                             StreetAddress = "5678 19th ave SW"
                         },
@@ -130,7 +131,7 @@ namespace AyncINN.Migrations
                             ID = 4,
                             City = "Miami",
                             Name = "Cozy Motel",
-                            Phone = "(786)385-7912",
+                            Phone = 1812673541,
                             State = "FL",
                             StreetAddress = "4282 52nd ave W"
                         },
@@ -139,7 +140,7 @@ namespace AyncINN.Migrations
                             ID = 5,
                             City = "Los Angeles",
                             Name = "Stars Inn",
-                            Phone = "(213)789-3841",
+                            Phone = 1457893245,
                             State = "CA",
                             StreetAddress = "32634 Santa Monica Blvd"
                         },
@@ -148,7 +149,7 @@ namespace AyncINN.Migrations
                             ID = 6,
                             City = "Oakland",
                             Name = "Cozy Motel",
-                            Phone = "(510)796-3984",
+                            Phone = 1812673541,
                             State = "CA",
                             StreetAddress = "13 Washington St"
                         });
@@ -216,7 +217,7 @@ namespace AyncINN.Migrations
                         {
                             ID = 3,
                             Layout = 2,
-                            Name = "House Lannister"
+                            Name = "Room Lannister"
                         },
                         new
                         {

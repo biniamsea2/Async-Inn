@@ -1,0 +1,13 @@
+﻿@model AyncINN.Models.ViewModels.RoomAmenitiesViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>testing in @Model.Room.RoomAmenities</h1>
+
+@foreach (var i in Model.RoomAmenities)
+{
+    <p>@i.Amenities.Name @i.Room.Name</p>
+}
+

@@ -25,7 +25,7 @@ namespace AyncINN.Models
 
         [Required]
         [DataType(DataType.PhoneNumber)]
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
 
 
