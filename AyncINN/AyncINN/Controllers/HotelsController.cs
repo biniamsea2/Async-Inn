@@ -22,12 +22,21 @@ namespace AyncINN.Controllers
             _context = hotel;
         }
 
+        /// <summary>
+        /// grabs all the hotels that exists from the db
+        /// </summary>
+        /// <returns></returns>
         // GET: Hotels
         public async Task<IActionResult> Index()
         {
             return View(await _context.GetHotelsAsync());
         }
 
+        /// <summary>
+        /// method checks if the hotel exists first, if it doesn't return not found. Otherwise display the hotel's info.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: Hotels/Details/5
         public async Task<IActionResult> Details(int id)
         {
@@ -52,6 +61,11 @@ namespace AyncINN.Controllers
             return View();
         }
 
+        /// <summary>
+        /// method allows you to create a new hotel. And only allows you to input the info displayed in quotes in the Bind.
+        /// </summary>
+        /// <param name="hotel"></param>
+        /// <returns></returns>
         // POST: Hotels/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -83,6 +97,14 @@ namespace AyncINN.Controllers
             return View(hotel);
         }
 
+
+        /// <summary>
+        /// allows you to edit the hotel that exists. It only allows you to edit the info in quotes. Once done it will
+        /// redirect you to the index page of this controller.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="hotel"></param>
+        /// <returns></returns>
         // POST: Hotels/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -117,6 +139,11 @@ namespace AyncINN.Controllers
             return View(hotel);
         }
 
+        /// <summary>
+        /// use the id of the hotel you want to delete, if it exists then dispaly it.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: Hotels/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
@@ -129,6 +156,11 @@ namespace AyncINN.Controllers
             return View(room);
         }
 
+        /// <summary>
+        /// confirm the hotel you want to delete. This page will appear after clicking 'delete' for the specific hotel you want to delete.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // POST: Hotels/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

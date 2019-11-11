@@ -24,7 +24,11 @@ namespace AyncINN.Controllers
         }
 
 
-
+        /// <summary>
+        /// uses the id of the specific room amenity then displays the info on a seperate page; only if it exists.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: RoomAmenities/Details/5
         public async Task<IActionResult> RoomDetails(int id)
         {
@@ -43,7 +47,7 @@ namespace AyncINN.Controllers
         }
 
 
-
+       
         // GET: RoomAmenities/Create
         
         public async Task<IActionResult> Create()
@@ -53,6 +57,11 @@ namespace AyncINN.Controllers
             return View();
         }
 
+        /// <summary>
+        /// will post the new room amenity that was just created, then will redirect you to that controller's index page
+        /// </summary>
+        /// <param name="roomAmenities"></param>
+        /// <returns></returns>
         // POST: RoomAmenities/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.

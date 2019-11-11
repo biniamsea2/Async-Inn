@@ -20,12 +20,22 @@ namespace AyncINN.Controllers
             _context = room;
         }
 
+
+        /// <summary>
+        /// display all rooms that exits from our db.
+        /// </summary>
+        /// <returns></returns>
         // GET: Rooms
         public async Task<IActionResult> Index()
         {
             return View(await _context.GetRoomsAsync());
         }
 
+        /// <summary>
+        /// use the id of the room the user wants more details on, then display it.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: Rooms/Details/5
         public async Task<IActionResult> Details(int id)
         {
@@ -50,6 +60,13 @@ namespace AyncINN.Controllers
             return View();
         }
 
+        /// <summary>
+        /// once you click create new on the room's index page, it will allow you to create a new room with the info
+        /// needed which, is displayed below in the 'Bind'. It will then return to that index page to allow you to see the 
+        /// new room that was added.
+        /// </summary>
+        /// <param name="room"></param>
+        /// <returns></returns>
         // POST: Rooms/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -81,6 +98,14 @@ namespace AyncINN.Controllers
             return View(room);
         }
 
+
+        /// <summary>
+        /// use the room id, if it exists, to allow the user to edit the room. Once completed method will redirect you to
+        /// the index page.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="room"></param>
+        /// <returns></returns>
         // POST: Rooms/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -115,6 +140,11 @@ namespace AyncINN.Controllers
             return View(room);
         }
 
+        /// <summary>
+        /// use id, if id exists to delete the room.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: Rooms/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
@@ -127,6 +157,11 @@ namespace AyncINN.Controllers
             return View(room);
         }
 
+        /// <summary>
+        /// before deleting, confirm this is the room you would like to delete. Once confirmed it will rediect you to th index page.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // POST: Rooms/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
