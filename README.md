@@ -1,6 +1,5 @@
 # Async-Inn
 
-LAB 13: Intro to Entity Framework  
 
 *Author: Biniam Tesfamariam*
 
@@ -82,6 +81,9 @@ Our Amenities table is holding a primary key and information regarding the names
 ---
 
 ### Change Log
-1.0: LAB 13: Intro to Entity Framework completed 10/31/19
+1.0: LAB 13 Intro to Entity Framework completed 10/31/19  
+1.1: LAB 14 Entity Framework pt. 2 completed 11/4/19  
+1.2: LAB 16 Dependency Injection partial 11/5/19  
+1.3:  LAB 18 Testing & Deployment partial 11/10/19  
 
 ------------------------------
