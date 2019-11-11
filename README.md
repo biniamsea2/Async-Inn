@@ -73,7 +73,7 @@ Then select and open ```AyncINN.sln```
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(61).png)
 ### View of All Amenities
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(60).png)
-### View All Rooms
+### View of All Rooms
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(63).png)
 ### Delete a Room
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(65).png)
