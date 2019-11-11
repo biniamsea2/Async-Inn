@@ -10,7 +10,7 @@ This is an ASP.NET web application that creates hotel management system,
 this is the initial .NET Core MVC structure and application built from scratch.
 
 ## Azure Deployed Site
-https://asynchotel.azurewebsites.net/
+https://asynchotel.azurewebsites.net
 
 ## Application Specifications
 ###### Your application should include the following:  
