@@ -62,7 +62,8 @@ Then select and open ```AyncINN.sln```
 
 ### Visuals
 
-#### Entity Relationship Diagram
+### Entity Relationship Diagram
+![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AsyncInn2.png)
 ### Application Home Page
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(57).png)
 ### View of All Hotels
