@@ -65,17 +65,17 @@ Then select and open ```AyncINN.sln```
 #### Entity Relationship Diagram
 ### Application Home Page
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(57).png)
-View of All Hotels
+### View of All Hotels
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(58).png)
-Editing a Hotel
+### Editing a Hotel
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(62).png)
-Deleting a Hotel
+### Deleting a Hotel
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(61).png)
-View of All Amenities
+### View of All Amenities
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(60).png)
-View All Rooms
+### View All Rooms
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(63).png)
-Delete a Room
+### Delete a Room
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(65).png)
 
 ---
