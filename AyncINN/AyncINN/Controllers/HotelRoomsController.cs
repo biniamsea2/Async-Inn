@@ -27,9 +27,9 @@ namespace AyncINN.Controllers
         }
 
         // GET: HotelRooms/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
+            if (id <=0)
             {
                 return NotFound();
             }
@@ -54,6 +54,11 @@ namespace AyncINN.Controllers
             return View();
         }
 
+        /// <summary>
+        /// method allows you to create a new hotel room. 
+        /// </summary>
+        /// <param name="hotelRoom"></param>
+        /// <returns></returns>
         // POST: HotelRooms/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -73,9 +78,9 @@ namespace AyncINN.Controllers
         }
 
         // GET: HotelRooms/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
+            if (id <=0)
             {
                 return NotFound();
             }
@@ -90,6 +95,13 @@ namespace AyncINN.Controllers
             return View(hotelRoom);
         }
 
+        /// <summary>
+        /// method allows the user to be able to edit the hotelroom if it exists. It updates the hotel rooms then saves
+        /// changes. It then redirects them to that controller's index page
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="hotelRoom"></param>
+        /// <returns></returns>
         // POST: HotelRooms/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -147,6 +159,12 @@ namespace AyncINN.Controllers
             return View(hotelRoom);
         }
 
+        /// <summary>
+        /// confirms whether or not you want to delete that hotel room. Once you decide to delete it, it then 
+        /// redirects you to the index page, where you can see if it was deleted or not.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // POST: HotelRooms/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

@@ -20,12 +20,21 @@ namespace AyncINN.Controllers
             _context = amenities;
         }
 
+        /// <summary>
+        /// index for amenities page. This get the amenities if it exists.
+        /// </summary>
+        /// <returns></returns>
         // GET: Amenities
         public async Task<IActionResult> Index()
         {
             return View(await _context.GetAmenitiesAsync());
         }
 
+        /// <summary>
+        /// this method will get the details for the amenities only if it exists
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: Amenities/Details/5
         public async Task<IActionResult> Details(int id)
         {
@@ -44,12 +53,19 @@ namespace AyncINN.Controllers
             return View(amenities);
         }
 
+
         // GET: Amenities/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        /// <summary>
+        /// this method will post the amenitiy that was just created. Once done it will rediect you to the index page
+        /// to see the amenitiy that was added
+        /// </summary>
+        /// <param name="amenities"></param>
+        /// <returns></returns>
         // POST: Amenities/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -81,6 +97,13 @@ namespace AyncINN.Controllers
             return View(amenities);
         }
 
+        /// <summary>
+        /// if the amenity exist this method will allow you to edit it and redirect you to the index page
+        /// to view the edited amenity.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="amenities"></param>
+        /// <returns></returns>
         // POST: Amenities/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -115,6 +138,11 @@ namespace AyncINN.Controllers
             return View(amenities);
         }
 
+        /// <summary>
+        /// if amenity exists this method will allow you to display it before deleting it.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: Amenities/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
@@ -126,6 +154,11 @@ namespace AyncINN.Controllers
             return View(amenity);
         }
 
+        /// <summary>
+        /// method confirms the deletion of the amenity. It will then redirect you to the index page.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // POST: Amenities/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

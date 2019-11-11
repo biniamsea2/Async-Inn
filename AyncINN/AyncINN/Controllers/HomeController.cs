@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AyncINN.Controllers
 {
+    /// <summary>
+    /// will view the home page.
+    /// </summary>
     public class HomeController : Controller
     {
         public IActionResult Index()
