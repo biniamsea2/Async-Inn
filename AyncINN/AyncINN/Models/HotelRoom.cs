@@ -9,10 +9,15 @@ namespace AyncINN.Models
     public class HotelRoom
     {
         public int ID { get; set; }
+        [Required]
+        [Display(Name = "Hotel ID")]
         public int HotelID { get; set; }
 
         [Required]
+        [Display(Name = "Room Number")]
         public int RoomNumber { get; set; }
+        [Required]
+        [Display(Name = "Room ID")]
         public int RoomID { get; set; }
 
         [Required]
