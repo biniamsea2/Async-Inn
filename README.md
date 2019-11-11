@@ -63,7 +63,7 @@ Then select and open ```AyncINN.sln```
 ### Visuals
 
 #### Entity Relationship Diagram
-## Application Home Page
+### Application Home Page
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(57).png)
 View of All Hotels
 ![Image 1](https://github.com/biniamsea2/Async-Inn/blob/master/AyncINN/Screenshot%20(58).png)
