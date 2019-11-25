@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace AyncINN.Models
 {
+    /// <summary>
+    /// the hotelRoom class has properties that are all required information for each hotel room. Also changed display
+    /// names for some properties. This class will include composite keys so, navigation properties are added at the bottom.
+    /// </summary>
     public class HotelRoom
     {
         public int ID { get; set; }

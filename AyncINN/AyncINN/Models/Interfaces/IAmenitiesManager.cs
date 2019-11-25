@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace AyncINN.Models.Interfaces
 {
+    /// <summary>
+    /// interface with the crud operations that we will use to inject into our service. 
+    /// </summary>
     public interface IAmenitiesManager
     {
         //Create amenity 

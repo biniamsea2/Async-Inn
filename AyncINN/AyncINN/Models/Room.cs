@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace AyncINN.Models
 {
+    /// <summary>
+    /// The room class will hold the layout in addition to the other properties. The layout is listed as an enum at the 
+    /// bottom of this class. Data notations are added to make certain information required. Also, changed the display name for the 
+    /// room name property. This class includes the use of composite keys, so the navigation property is included in this class.
+    /// </summary>
     public class Room
     {
         public int ID { get; set; }
