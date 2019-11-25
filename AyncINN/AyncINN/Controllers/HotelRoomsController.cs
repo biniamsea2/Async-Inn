@@ -38,10 +38,10 @@ namespace AyncINN.Controllers
                 .Include(h => h.Hotel)
                 .Include(h => h.Room)
                 .FirstOrDefaultAsync(m => m.HotelID == id);
-            if (hotelRoom == null)
-            {
-                return NotFound();
-            }
+            //if (hotelRoom == null)
+            //{
+            //    return NotFound();
+            //}
 
             return View(hotelRoom);
         }

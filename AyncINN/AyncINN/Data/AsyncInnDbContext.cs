@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace AyncINN.Data
 {
+    /// <summary>
+    /// seeding in information reagarding hotels, rooms, and amenitites
+    /// </summary>
     public class AsyncInnDbContext : DbContext
     {
         public AsyncInnDbContext(DbContextOptions<AsyncInnDbContext>options) : base(options)

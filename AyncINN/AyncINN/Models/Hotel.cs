@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace AyncINN.Models
 {
+
+    /// <summary>
+    /// hotel class will hold properties that will be used as infomation for each hotel.
+    /// Also added data notations making all properties required and changing display name for address
+    /// </summary>
     public class Hotel
     {
         public int ID { get; set; }

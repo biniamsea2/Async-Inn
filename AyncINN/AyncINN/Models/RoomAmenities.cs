@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace AyncINN.Models
 {
+    /// <summary>
+    /// the roomAmenities class will hold information for the each room amenity. Used data notations to set some properties
+    /// to required. Also used data notations to change the display name. This class is using composite keys so navigation 
+    /// properties were created towards the bottom of the class
+    /// </summary>
     public class RoomAmenities
     {
         public int ID { get; set; }

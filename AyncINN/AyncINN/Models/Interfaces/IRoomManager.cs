@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 
 namespace AyncINN.Models.Interfaces
 {
+    /// <summary>
+    /// the iRoomManager is an interface that holds all of our crud operations. We will inject this interface into 
+    /// our RoomService.
+    /// </summary>
     public interface IRoomManager
     {
             //Create room
