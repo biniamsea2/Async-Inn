@@ -9,6 +9,11 @@
 This is an ASP.NET web application that creates hotel management system, 
 this is the initial .NET Core MVC structure and application built from scratch.
 
+## Problem Domain
+The owners of “Async Inn” have approached you with plans to renovate their hotel chain. Currently they are tracking all the different locations and rooms in spreadsheets and binders. They currently have about 10 binders full of paperwork that consists of the difference between each location and the pricing for each room. The amount of time and paperwork it takes to manage the rooms and locations is costing the company both time and money. They are currently looking for a “better way” to maintain their business model.
+
+They are currently looking for a full stack web application that will allow them to better manage the assets in their hotels. They are anticipating the ability to modify and manage rooms, amenities, and new hotel locations as they are built. They have turned to you to assist them in persisting their data across a relational database and maintain its integrity as they make changes to the system.
+
 ## Azure Deployed Site
 https://asynchotel.azurewebsites.net
 
